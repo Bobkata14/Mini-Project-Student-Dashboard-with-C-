@@ -1,0 +1,125 @@
+Mini-Project #2: Student Dashboard 🎓
+
+
+
+
+
+
+
+classcentral.com
+
+
+Student Dashboard — Student Profile and Calculator
+You will create a console application that collects information about a student, calculates their average grade, and tracks their personal monthly budget. Level: Beginner
+C# Console Application
+No new programming constructs
+
+
+1. What will you practice?
+In this project, you will use:
+- Console.WriteLine() and Console.ReadLine()
+- Comments using //
+- Variables and data types: string, int, double, decimal, bool, char
+- Type conversion using Convert.ToInt32(), Convert.ToDouble(), Convert.ToDecimal(), and Convert.ToBoolean()
+- Arithmetic operators: +, -, *, /, %
+- Assignment operators: =, +=
+- Comparison operators: >=, >
+- Logical operator: &&
+- Incrementing a value using ++
+Do not use if, else, switch, loops, or custom (user-defined) methods. We haven't covered these yet.
+2. Your Task
+Part A — Collecting Information
+The program must prompt the user to enter the following data:
+Information | Variable Name | Type
+Student Name | name | string
+Age | age | int
+Group Letter | groupLetter | char
+Is a full-time student? | isFullTime | bool
+First Grade | grade1 | double
+Second Grade | grade2 | double
+Third Grade | grade3 | double
+Monthly Budget | monthlyBudget | decimal
+Regular Expenses | regularExpenses | decimal
+Additional Expenses | extraExpenses | decimal
+Use `Console.ReadLine()` to accept user input, and the appropriate methods from the `Convert` class to convert the values. For the `char` type, enter a single letter, for example, 'B'. For the `bool` type, use `true` or `false`.
+Part B — Calculating the Average Grade
+Create a variable for the average grade that calculates the arithmetic mean of the three grades. The formula is:
+\[
+\text{Average Grade} = \frac{\text{Grade 1} + \text{Grade 2} + \text{Grade 3}}{3}
+\]
+
+Next, create two boolean variables:
+
+`hasPassed` — whether the average grade is at least 3.00.
+
+`eligibleForScholarship` — whether the average grade is at least 5.50 and the student is enrolled in a full-time program.
+
+Use comparison operators and the logical operator `&&` here. For now, simply output the result as `True` or `False`, without using an `if` conditional statement.
+Part C — Calculating the Budget
+Create a variable `totalExpenses` that sums up the basic and additional expenses.
+
+Use the `+=` operator to add the additional expenses.
+
+Then, calculate `remainingBudget` — the amount left over from the monthly budget.
+\[
+\text{Remaining Budget} = \text{Monthly Budget} - \text{Total Expenses}
+\]
+
+Part D — Additional Calculations
+Calculate two more values:
+- `ageInMonths` — the student's approximate age in months. - `ageNextYear` — the person's age one year from now. To achieve this, use the `++` operator without altering the original age value.
+Part E — Displaying the Report
+Format the output using separator lines made up of `=` or `-` characters. You can display the title using `.ToUpper()`, just as you did in the first project. The program should display information about the student, the three grades, the average grade, the `hasPassed` and `eligibleForScholarship` statuses, the total costs, and the remaining budget.
+3. Example of how the program should look
+This is an example of the output given specific input data. Your design may vary. =====================================
+STUDENT DASHBOARD
+=====================================
+Name: Boris
+Age: 19
+Group: B
+Full-time student: Yes
+
+--- ACADEMIC RECORD ---
+Grade 1: 5
+Grade 2: 6
+Grade 3: 6
+Average grade: 5.6667
+Successfully completed: Yes
+Eligible for a scholarship: Yes
+
+--- MONTHLY BUDGET ---
+Monthly budget: 1200
+Total expenses: 550
+Remaining budget: 650
+
+--- ADDITIONAL INFORMATION ---
+Age in months: 228
+Age next year: 20
+=====================================
+
+Note: In this example, additional expenses are 100, and basic expenses are 450. The average grade is approximately 5.67.
+4. Guidelines you can use
+You do not need to memorize everything. Use the following syntax examples:
+Entering an integer
+int age = Convert.ToInt32(Console.ReadLine());
+
+
+Entering a decimal number
+double grade1 = Convert.ToDouble(Console.ReadLine()); Calculating an average value
+double average = (grade1 + grade2 + grade3) / 3;
+
+
+Checking using a comparison operator
+bool hasPassed = average >= 3.0;
+
+
+Increasing the value in a copy of the age variable
+int ageNextYear = age;
+ageNextYear++; When entering fractional numbers, keep in mind your computer's regional settings: in a Bulgarian environment, the decimal separator is often a comma. For your first attempt, you can enter whole numbers to avoid this issue.
+5. Criteria for Successful Completion
+Checklist
+0 of 8
+
+[ ] I enter all data provided by the user.
+[ ] I use the correct data types and conversions.
+[ ] I calculate...
